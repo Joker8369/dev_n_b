@@ -1,8 +1,12 @@
 class DevelopersController < ApplicationController
   def index
+    @developers = Developer.all
   end
 
   def show
+  end
+
+  def new
   end
 
   def create
@@ -12,5 +16,8 @@ class DevelopersController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
   end
 end
