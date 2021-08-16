@@ -10,9 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_08_16_132334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_on"
+    t.date "end_on"
+    t.bigint "customer_id"
+    t.bigint "developer_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_bookings_on_customer_id"
+    t.index ["developer_id"], name: "index_bookings_on_developer_id"
+  end
+
+  create_table "developers", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.float "rating"
+    t.string "skills"
+    t.string "prog_langage"
+    t.string "work_zone"
+    t.integer "price_day"
+    t.integer "project_done"
+    t.bigint "owner_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["owner_id"], name: "index_developers_on_owner_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name", default: "", null: false
+    t.string "last_name", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "bookings", "developers"
+  add_foreign_key "bookings", "users", column: "customer_id"
+  add_foreign_key "developers", "users", column: "owner_id"
 end
