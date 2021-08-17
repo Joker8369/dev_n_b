@@ -1,2 +1,3 @@
-<h1>Developers#index</h1>
-<p>Find me in app/views/developers/index.html.erb</p>
+<% @developers.each do |developer| %>
+<p><%= developer.first_name %> <%= developer.last_name %></p>
+<% end %>
