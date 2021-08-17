@@ -1,3 +1,49 @@
-<% @developers.each do |developer| %>
-<p><%= developer.first_name %> <%= developer.last_name %></p>
-<% end %>
+
+<div class="container">
+  <div class="list">
+    <% @developers.each do |dev| %>
+      <div class="cards">
+        <div class="container_card">
+          <%= link_to "#", class: "thumbnail" do %>
+           <%= image_tag "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" %>
+          <% end %>
+
+
+          <div class="description">
+            <div class="full_name">
+              <h2><%= dev.first_name %></h2>
+              <h2><%= dev.last_name %></h2>
+            </div>
+            <div class="experiences">
+              <h3><%= "#{dev.skills} an(s) d'expérience" %></h3>
+            </div>
+          </div>
+
+            <div class="language_prog">
+              <h3>
+                <%= dev.prog_langage %>
+              </h3>
+            </div>
+              <div class="work_zone">
+                <h3>
+                  <%= dev.work_zone %>
+                </h3>
+              </div>
+               <div class="price">
+                <h4>
+                  <%= "#{dev.price_day} € " %>
+                </h4>
+              </div>
+            <div class="hire_me">
+            <%= link_to "Louez-Moi", "pages#home" %>
+            </div>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="map">
+  <img src="" alt="">
+</div>
