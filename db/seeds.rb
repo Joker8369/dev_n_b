@@ -1,3 +1,4 @@
+Developer.destroy_all
 Developer.create!(first_name: "Clement", last_name: "Moreno", rating: 4.3, skills: 7, prog_langage: "JS and CSS", work_zone: "Rhone", project_done: 63, price_day: 750, owner_id: User.last.id)
 Developer.create!(first_name: "Jonathan", last_name: "Kerbrat", rating: 3.7, skills: 4, prog_langage: "Jquery", work_zone: "Rhone-Alpes Auvergne", project_done: 24, price_day: 340, owner_id: User.last.id)
 Developer.create!(first_name: "Leo", last_name: "Genuit", rating: 2, skills: 1, prog_langage: "PHP", work_zone: "Roanne", project_done: 4, price_day: 100, owner_id: User.last.id)
