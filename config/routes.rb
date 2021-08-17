@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'developers/index'
+  get 'developers/show'
+  get 'developers/create'
+  get 'developers/destroy'
+  get 'developers/edit'
   devise_for :users
   root to: 'pages#home'
   resources :developers, only: [:index]

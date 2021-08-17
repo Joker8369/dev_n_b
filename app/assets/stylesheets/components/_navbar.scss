@@ -1,12 +1,30 @@
-.navbar-lewagon {
+$grey : rgb(126, 126, 126);
+
+.logo{
+  width : 20px;
+}
+.navbar {
   justify-content: space-between;
-  background: white;
+  background: rgba(245, 245, 245, 0.329);
+  box-shadow: 8px 0px 20px rgb(230, 230, 230);
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar a{
+  text-decoration: none;
+  font-size: 8px;
+  color: $grey;
+  width: 60px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 8px;
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar .thumbnail img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border: solid 2px $grey;
+  padding : 1px;
+  border-radius: 50%;
+}
+.logo img{
+  width : 30px;
 }
