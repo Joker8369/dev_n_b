@@ -1,6 +1,7 @@
 // Specific CSS for your home-page
 body {
   background : rgb(255, 255, 255);
+  height: 100vh;
 }
 h2{
   font-size : 8px;
@@ -10,18 +11,28 @@ h2{
   margin : 0;
 }
 h3{
-  font-size : 7px;
+  font-size: 7px;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
-  color: $grey;
-  margin : 0;
+  color: #7e7e7e;
+  margin: 0;
+  margin-right: 25px;
+
+}
+h4{
+  font-size: 7px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: #7e7e7e;
+  margin: 0;
+  width: max-content;
 }
 .container{
   position: relative;
-  // background-color: red;
-  height: 90vh;
-  width : 50vw;
+  height: calc(100vh - 50px);
+  width: 65vw;
   margin: 0;
+  padding : 5px;
 }
 .search {
   position: relative;
@@ -34,38 +45,68 @@ h3{
 .list{
   // background : green;
   width : 80%;
-  height : calc(100vh -  100px);
+  height : 80%;
   margin : 80px auto 0px auto;
   position: relative;
+  overflow-y: scroll;
 }
 .container_card{
   display: flex;
+  align-items: center;
 }
 .cards{
   background : white;
   height : 40px;
   width : 100%;
-  margin : 5px auto;
+  margin : 20px auto;
   border-radius : 5px;
   box-shadow: 0px 2px 5px $box-shadow;
   display:flex;
-  align-items: center;
-  padding-left: 5px;
+  flex-direction: column;
+  padding-top: 5px ;
 }
 .thumbnail img{
   width: 30px;
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
+  margin-left : 5px;
 }
 .description{
-  display :flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left : 5px;
+  margin: 0px 15px;
+  width: 60%;
 }
 .full_name{
   display: flex;
+}
+.language_prog{
+  display:flex;
+  align-items: center;
+  width: 50%;
+}
+.work_zone{
+  width: 40%;
+}
+.hire_me{
+    font-size: 8px;
+    width: 30%;
+    margin: 0 30px;
+    padding: 5px;
+    background: #1edd88;
+    text-align: center;
+    border-radius: 5px;
+}
+.hire_me:hover{
+    background: #18b66f;
+}
+.hire_me a{
+  color : white;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 #map {
   background: green;
