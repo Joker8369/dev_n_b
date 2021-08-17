@@ -4,7 +4,7 @@ class CreateDevelopers < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :first_name
       t.float :rating
-      t.string :skills
+      t.integer :skills
       t.string :prog_langage
       t.string :work_zone
       t.integer :price_day
