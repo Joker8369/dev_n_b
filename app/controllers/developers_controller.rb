@@ -33,6 +33,11 @@ class DevelopersController < ApplicationController
   end
 
   def update
+    if @developer.update(dev_params)
+      redirect_to developer_path(@developer)
+    else
+      render :edit
+    end
   end
 
   private
