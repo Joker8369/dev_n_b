@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_132334) do
     t.string "last_name"
     t.string "first_name"
     t.float "rating"
-    t.string "skills"
+    t.integer "skills"
     t.string "prog_langage"
     t.string "work_zone"
     t.integer "price_day"
