@@ -14,6 +14,7 @@ h3{
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   color: $grey;
+  margin : 0;
 }
 .container{
   position: relative;
@@ -33,9 +34,12 @@ h3{
 .list{
   // background : green;
   width : 80%;
-  height : 70vh;
-  margin : 0 auto;
+  height : calc(100vh -  100px);
+  margin : 80px auto 0px auto;
   position: relative;
+}
+.container_card{
+  display: flex;
 }
 .cards{
   background : white;
@@ -53,6 +57,15 @@ h3{
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
+}
+.description{
+  display :flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left : 5px;
+}
+.full_name{
+  display: flex;
 }
 #map {
   background: green;
