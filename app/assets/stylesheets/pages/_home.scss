@@ -1,1 +1,64 @@
 // Specific CSS for your home-page
+body {
+  background : rgb(255, 255, 255);
+}
+h2{
+  font-size : 8px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 3px;
+  margin : 0;
+}
+h3{
+  font-size : 7px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: $grey;
+}
+.container{
+  position: relative;
+  // background-color: red;
+  height: 90vh;
+  width : 50vw;
+  margin: 0;
+}
+.search {
+  position: relative;
+  background : $grey;
+  width: 80%;
+  height : 50px;
+  margin : 0px auto 30px auto;
+  top : 15px;
+}
+.list{
+  // background : green;
+  width : 80%;
+  height : 70vh;
+  margin : 0 auto;
+  position: relative;
+}
+.cards{
+  background : white;
+  height : 40px;
+  width : 100%;
+  margin : 5px auto;
+  border-radius : 5px;
+  box-shadow: 0px 2px 5px $box-shadow;
+  display:flex;
+  align-items: center;
+  padding-left: 5px;
+}
+.thumbnail img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#map {
+  background: green;
+  position: absolute;
+  width: 50%;
+  top: 50px;
+  height: calc(100vh - 50px);
+  left: 50%;
+}
