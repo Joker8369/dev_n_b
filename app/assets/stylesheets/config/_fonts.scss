@@ -14,3 +14,35 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+h2{
+  font-weight:      600;
+  font-family:      'Montserrat', sans-serif;
+  padding-right:    3px;
+  font-size:        24px;
+  margin:           0;
+}
+h3{
+  font-size :     12px;
+  font-weight:    600;
+  font-family:    'Montserrat', sans-serif;
+  padding-right:  3px;
+  margin :        0;
+}
+h4{
+  font-size:    12px;
+  font-weight:  400;
+  font-family:  'Montserrat', sans-serif;
+  color:       #7e7e7e;
+  margin:        0;
+  margin-right:  25px;
+
+}
+h5{
+  font-size:    12px;
+  font-weight:  600;
+  font-family: 'Montserrat', sans-serif;
+  color:      #7e7e7e;
+  margin:       0;
+  width:        max-content;
+}
