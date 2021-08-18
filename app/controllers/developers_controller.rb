@@ -10,16 +10,14 @@ class DevelopersController < ApplicationController
 
   def new
     @developer = Developer.new
-    @owner = current_user
   end
 
   def create
     @developer = Developer.new(dev_params)
-    @owner = current_user
-    @developer.owner_id = @owner
+    @developer.owner = current_user
 
     if @developer.save
-      redirect_to developer_path(@developer)
+      redirect_to developers_path(@developer)
     else
       render :new
     end
@@ -27,12 +25,18 @@ class DevelopersController < ApplicationController
 
   def destroy
     @developer.delete
+    redirect_to developers_path
   end
 
   def edit
   end
 
   def update
+    if @developer.update(dev_params)
+      redirect_to developer_path(@developer)
+    else
+      render :edit
+    end
   end
 
   private
