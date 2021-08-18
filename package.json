@@ -1,5 +1,5 @@
 {
-  "name": "my-webpack-project",
+  "name": "dev",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -26,7 +26,7 @@
     "webpack-dev-server": "^3.11.2",
     "workbox-webpack-plugin": "^6.2.4"
   },
-  "description": "My webpack project",
+  "description": "dev",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
