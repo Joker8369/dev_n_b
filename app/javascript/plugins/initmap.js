@@ -4,20 +4,30 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
-  // const markers = JSON.parse(mapElement.dataset.markers);
+
+  const fitMapToMarkers = (map, markers) => {
+  const bounds = new mapboxgl.LngLatBounds();
+  markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
+  map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+  };
 
   if (mapElement) { // only build a map if there's a div#map to inject into
-    mapboxgl.accessToken = 'pk.eyJ1Ijoiam9rZXI4MyIsImEiOiJja3J5bHRsZ3Ewa2F5MnFvOXJyb2p5ZzdqIn0.iQ4wC47dqMT5VJtg3VlEVg';
+    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/streets-v10'
     });
-    // const markers = JSON.parse(mapElement.dataset.markers);
-    // markers.forEach((marker) => {
-    //   new mapboxgl.Marker()
-    //     .setLngLat([40, 40])
-    //     .addTo(map);
-    // });
+
+    const markers = JSON.parse(mapElement.dataset.markers);
+    markers.forEach((marker) => {
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window); // add this
+
+      new mapboxgl.Marker()
+        .setLngLat([marker.lng, marker.lat])
+        .setPopup(popup) // add this
+        .addTo(map);
+    });
   }
 };
+
 export { initMapbox };
