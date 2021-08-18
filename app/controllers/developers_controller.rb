@@ -3,6 +3,13 @@ class DevelopersController < ApplicationController
   before_action :find_dev, only: %i[show destroy edit update]
   def index
     @developers = Developer.all
+    @markers = @developers.geocoded.map do |developer|
+      {
+        lat: developer.latitude,
+        lng: developer.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { developer: developer })
+      }
+    end
   end
 
   def show
