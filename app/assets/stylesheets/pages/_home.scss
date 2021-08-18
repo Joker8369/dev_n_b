@@ -50,13 +50,14 @@ h5{
   top : 15px;
   background: #7e7e7e;
 }
+
 .list{
   // background : green;
   width : 80%;
   height : 80%;
   margin : 20px auto 0px auto;
   position: relative;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 .container_card{
   display: flex;
@@ -110,6 +111,7 @@ h5{
 .hire_me:hover{
     background: #18b66f;
 }
+
 .hire_me a{
   color : white;
   font-weight: 600;
@@ -118,7 +120,4 @@ h5{
   font-family: 'Montserrat', sans-serif;
 
 }
-#map {
-  background: green;
 
-}

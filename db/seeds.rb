@@ -12,3 +12,9 @@ Developer.create!(first_name: "chloe", last_name: "Nguyen", rating: 2.8, skills:
 Developer.create!(first_name: "Nathan", last_name: "Bertier", rating: 4.9, skills: 1, prog_langage: "C and C++", work_zone: "World", project_done: 1360, price_day: 42, owner_id: User.last.id)
 Developer.create!(first_name: "Anne-charlotte", last_name: "Morizot", rating: 4.6, skills: 3, prog_langage: "java", work_zone: "France", project_done: 63, price_day: 429, owner_id: User.last.id)
 Developer.create!(first_name: "Simon", last_name: "Granger", rating: 3.2, skills: 3, prog_langage: "GO", work_zone: "Var", project_done: 24, price_day: 240, owner_id: User.last.id)
+Developer.create!(first_name: "Jojo", last_name: "Blanchard", rating: 3.2, skills: 3, prog_langage: "Ruby", work_zone: "Var", project_done: 24, price_day: 240, owner_id: User.last.id)
+Developer.create!(first_name: "Clément", last_name: "Malfroy", rating: 3.2, skills: 3, prog_langage: "GO", work_zone: "Var", project_done: 24, price_day: 240, owner_id: User.last.id)
+Developer.create!(first_name: "Yann", last_name: "Yann", rating: 3.2, skills: 3, prog_langage: "GO", work_zone: "Var", project_done: 24, price_day: 240, owner_id: User.last.id)
+Developer.create!(first_name: "Alex", last_name: "Bouvier", rating: 3.2, skills: 3, prog_langage: "GO", work_zone: "Var", project_done: 24, price_day: 240, owner_id: User.last.id)
+
+puts "#{Developer.count} developers created"
