@@ -1,1 +1,4 @@
-<%= @user.email %>
+<p>Hello <%= @user.first_name %></p>
+<% @user_devs.each do |dev| %>
+<p><%= dev.first_name %> </p>
+<% end %>
