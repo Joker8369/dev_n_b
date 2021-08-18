@@ -8,6 +8,7 @@ h2{
   font-family: 'Montserrat', sans-serif;
   padding-right: 3px;
   font-size: 24px;
+  margin: 0;
 }
 h3{
   font-size : 12px;
@@ -119,9 +120,5 @@ h5{
 }
 #map {
   background: green;
-  position: absolute;
-  width: 50%;
-  top: 50px;
-  height: calc(100vh - 50px);
-  left: 50%;
+
 }
