@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @developer = Developer.find(params[:id])
+    @developer = Developer.find(params[:developer_id])
   end
 
   def create
