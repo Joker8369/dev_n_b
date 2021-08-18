@@ -2,14 +2,13 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @customer = current_user
     @developer = Developer.find(params[:id])
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.customer_id = @customer
-    @booking.developer_id = @developer
+    @booking.customer = current_user
+    @booking.developer = @developer
     if @booking.save
       redirect_to user_path(current_user)
     else
