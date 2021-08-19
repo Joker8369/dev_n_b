@@ -1,62 +1,7 @@
-.container_show{
-  width: 45%;
-  height: 550px;
-  position: relative;
-}
-.user_description{
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 90%;
-  margin: 25px auto;
-}
-.user_thumbnail{
-  margin-left: 10px;
-}
-.user_thumbnail img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.user_presentation{
-  margin-left: 10px;
-}
-.full_name{
-  display: flex;
-}
-.engagez_moi{
-    font-size: 8px;
-    width: 20%;
-    margin: 0 30px;
-    padding: 5px 3px;
-    background: #1edd88;
-    text-align: center;
-    border-radius: 5px;
-    position: relative;
-    left: 307px;
-    top: 30px;
-}
-.engagez_moi:hover{
-    background: #18b66f;
-}
-.engagez_moi a{
-  color : white;
-  font-weight: 600;
-  font-size: 12px;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
 
-}
-.experiences{
-  display: flex;
-  align-items: center;
-}
-.stars{
-  display: flex;
-  margin-left: 15px;
-  align-items: center;
-}
-.stars img{
-  width: 15px;
+.position_bouton{
+    width:    20%;
+    position: relative;
+    left:     200px;
+    top:      40px;
 }
