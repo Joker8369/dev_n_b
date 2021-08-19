@@ -1,0 +1,9 @@
+<%= simple_form_for(developer) do |f| %>
+  <%= f.input :first_name, as: :file %>
+  <%= f.input :last_name, as: :file %>
+  <%= f.input :price_day, as: :file %>
+  <%= f.input :prog_langage, :check_box: LANGAGE %>
+  <%= f.input :work_zone, as: :file %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit %>
+<% end %>

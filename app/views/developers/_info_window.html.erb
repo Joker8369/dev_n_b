@@ -1,4 +1,4 @@
-<%= image_tag "boby.png", width: 50, height: 50 %>
+<%= cl_image_tag @developer.photo.key, height: 100, width: 100, crop: :fill %>
 <h2><%= developer.first_name %></h2>
 <h3><%= developer.last_name %></h3>
 <p><%= developer.work_zone %></p>
