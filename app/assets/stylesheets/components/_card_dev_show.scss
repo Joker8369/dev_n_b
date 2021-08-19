@@ -1,0 +1,36 @@
+.profil{
+  width:    45%;
+  height:   550px;
+  position: relative;
+}
+.container_profil{
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+}
+
+.user_description{
+    display:     flex;
+    align-items: center;
+    width:       80%;
+    margin:      25px auto;
+}
+.user_thumbnail{
+  margin-left: 10px;
+}
+.user_thumbnail img{
+  width:          80px;
+  height:         80px;
+  border-radius:  50%;
+  object-fit:     cover;
+}
+.user_presentation{
+  margin-left: 10px;
+}
+.full_name{
+  display: flex;
+}
+.experiences{
+  display:      flex;
+  align-items:  center;
+}
