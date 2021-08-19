@@ -1,5 +1,6 @@
 
 
+
 // popul preview
 
 .mapboxgl-popup {
@@ -12,4 +13,9 @@
   height: 100px;
   display: flex;
   justify-content: space-between;
+
+#map {
+  position: sticky;
+  height:   100vh;
+  top:      0;
 }

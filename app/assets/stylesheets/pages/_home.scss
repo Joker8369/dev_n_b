@@ -1,124 +1,81 @@
-// Specific CSS for your home-page
-body {
-  background : rgb(255, 255, 255);
-  height: 100vh;
-}
-h2{
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  padding-right: 3px;
-  font-size: 24px;
-  margin: 0;
-}
-h3{
-  font-size : 12px;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  padding-right: 3px;
-  margin : 0;
-}
-h4{
-  font-size: 12px;
-  font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
-  color: #7e7e7e;
-  margin: 0;
-  margin-right: 25px;
-
-}
-h5{
-  font-size: 12px;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  color: #7e7e7e;
-  margin: 0;
-  width: max-content;
+h1{
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: #b3c0fc;
+  width: 150%;
 }
 .container{
-  position: relative;
-  height: calc(100vh - 50px);
-  width: 65vw;
-  margin: 0;
-  padding : 5px;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left : 15px;
+
 }
-.search {
-  position: relative;
-  background : $grey;
-  width: 80%;
-  height : 50px;
-  margin : 0px auto 30px auto;
-  top : 15px;
-  background: #7e7e7e;
-}
-.list{
-  // background : green;
-  width : 80%;
-  height : 80%;
-  margin : 20px auto 0px auto;
-  position: relative;
-  overflow-y: scroll;
-}
-.container_card{
+.bg{
+  background-color: #f1f3fc;
+  box-shadow: 20px 20px 35px #d4ddff;
+  width: 100%;
+  height: 70%;
   display: flex;
   align-items: center;
 }
-.cards{
-  background : white;
-  height : 60px;
-  width : 100%;
-  margin : 20px auto;
-  border-radius : 5px;
-  box-shadow: 0px 2px 5px $box-shadow;
-  display:flex;
-  flex-direction: column;
-  padding-top: 5px ;
+.bg img{
+  width: fit-content;
+  height: 100%;
 }
-.thumbnail img{
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-left : 5px;
+.titre{
+  font-size: 60px;
+  font-family: 'Nanum Myeongjo', serif;
+  padding : 5%;
 }
-.description{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0px 15px;
-  width: 60%;
+.bouton_home {
+    display: flex;
+    margin: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
 }
-.full_name{
-  display: flex;
+
+.bouton_home a{
+  font-family: 'Poppins', sans-serif;
+  background-color: #b3c0fc;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 8px;
+  margin: 10px 15px;
+  color : #636e9c;
 }
-.language_prog{
-  display:flex;
-  align-items: center;
-  width: 50%;
-}
-.work_zone{
-  width: 40%;
-}
-.hire_me{
-    font-size: 8px;
-    width: 30%;
-    margin: 0 30px;
-    padding: 5px;
-    background: #1edd88;
-    text-align: center;
-    border-radius: 5px;
-}
-.hire_me:hover{
-    background: #18b66f;
-}
+
+.bouton_home a :hover{
+  background-color: #6c80d8;
+  color : white;
+
 .hire_me a{
   color : white;
   font-weight: 600;
   font-size: 12px;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-
 }
+  
 #map {
   background-image: url(https://images.unsplash.com/photo-1593281528163-311d58047de8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjIxfHxjb3VjaCVDMyVBOSUyMGRlJTIwc29sZWlsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
 background-repeat: no-repeat;
 }
+
+
+
+// popul preview
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  width: auto;
+
+}
+
