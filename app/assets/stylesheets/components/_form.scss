@@ -1,0 +1,22 @@
+.container_form{
+    width: 60%;
+    height: 60vh;
+    background: #b3c0fc;
+      box-shadow: 20px 20px 35px #d4ddff;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    margin: 100px auto;
+}
+#new_user{
+  width: 50%;
+}
+.btn{
+    background: #4d89e6;
+    margin-right: 5px;
+    color: white;
+}
+.form-action{
+    color: #b3c0fc;
+  text-decoration: none;
+}
