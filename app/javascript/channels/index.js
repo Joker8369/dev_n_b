@@ -11,3 +11,5 @@ channels.keys().forEach(channels)
 //   container: 'map',
 //   style: 'mapbox://styles/mapbox/streets-v11',
 // });
+
+< script async src = "https://unpkg.com/typer-dot-js@0.1.0/typer.js" ></script >
