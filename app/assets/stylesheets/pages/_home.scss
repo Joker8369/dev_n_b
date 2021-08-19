@@ -1,42 +1,47 @@
-// Specific CSS for your home-page
-body {
-  background : rgb(255, 255, 255);
-  height:       100vh;
+h1{
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: #b3c0fc;
+  width: 150%;
 }
-h2{
-  font-weight:      600;
-  font-family:      'Montserrat', sans-serif;
-  padding-right:    3px;
-  font-size:        24px;
-  margin:           0;
-}
-h3{
-  font-size :     12px;
-  font-weight:    600;
-  font-family:    'Montserrat', sans-serif;
-  padding-right:  3px;
-  margin :        0;
-}
-h4{
-  font-size:    12px;
-  font-weight:  400;
-  font-family:  'Montserrat', sans-serif;
-  color:       #7e7e7e;
-  margin:        0;
-  margin-right:  25px;
+.container{
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left : 15px;
 
 }
-h5{
-  font-size:    12px;
-  font-weight:  600;
-  font-family: 'Montserrat', sans-serif;
-  color:      #7e7e7e;
-  margin:       0;
-  width:        max-content;
+.bg{
+  background-color: #f1f3fc;
+  box-shadow: 20px 20px 35px #d4ddff;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
 }
-.list{
-  width :       80%;
-  height :      80%;
-  margin :      20px auto 0px auto;
-  position:     relative;
+.bg img{
+  width: fit-content;
+  height: 100%;
+}
+.titre{
+  font-size: 60px;
+  font-family: 'Nanum Myeongjo', serif;
+  padding : 5%;
+}
+.bouton_home {
+    display: flex;
+    margin: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.bouton_home a{
+  font-family: 'Poppins', sans-serif;
+  background-color: #b3c0fc;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 8px;
+  margin: 10px 15px;
 }
