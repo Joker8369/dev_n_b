@@ -1,3 +1,19 @@
+
+
+
+// popul preview
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  font-family: 'Open Sans', sans-serif;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+
 #map {
   position: sticky;
   height:   100vh;
