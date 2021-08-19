@@ -50,7 +50,7 @@ class DevelopersController < ApplicationController
 
   def dev_params
     params.require(:developer).permit(:first_name, :last_name, :skills, :rating, :prog_langage,
-                                      :work_zone, :price_day, :work_zone, :project_done)
+                                      :work_zone, :price_day, :work_zone, :project_done, :photo)
   end
 
   def find_dev
