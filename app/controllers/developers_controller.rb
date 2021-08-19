@@ -69,5 +69,11 @@ class DevelopersController < ApplicationController
     if params[:max_price].present?
       @developers = @developers.where("developers.price_day <= ?", params[:max_price])
     end
+    if params[:town].present?
+      @developers = @developers.where("developers.work_zone @@ :town", town: params[:town])
+    end
+    if params[:category].present?
+      @developers = @developers.where(prog_langage: params[:category])
+    end
   end
 end

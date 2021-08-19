@@ -17,8 +17,13 @@
                               value: params.dig(:max_price) } %>
       <%= f.input :town, placeholder: "Enter a town",
                           label: false,
-                          input_html: { name: :twon,
+                          input_html: { name: :town,
                           value: params.dig(:town) } %>
+      <%= f.input :category, collection: Developer::LANGAGE,
+                             selected: params.dig(:category),
+                             include_blank: true,
+                             label: false,
+                             input_html: { name: :category } %>
       <div class="ml-3">
         <%= f.submit "Search", class: "btn btn-primary"  %>
       </div>
@@ -72,5 +77,6 @@
   </div>
 </div>
 
-
+<div>
 <h2><%= link_to " + Add a new Developer", new_developer_path, class: "btn btn-primary"%></h2>
+</div>
