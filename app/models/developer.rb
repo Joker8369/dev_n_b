@@ -4,4 +4,8 @@ class Developer < ApplicationRecord
   has_many :customers, -> { distinct }, through: :bookings
   geocoded_by :work_zone
   after_validation :geocode, if: :will_save_change_to_work_zone?
+  LANGAGE = ["Ruby On Rails ", "Javascript", "VuJS", "C", "Java", "GO", "Python", "PHP", "Jquery"]
+  validates :species, presence: true, inclusion: { in: LANGAGE }
+
+
 end
