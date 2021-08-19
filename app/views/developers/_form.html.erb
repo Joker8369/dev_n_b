@@ -1,9 +1,11 @@
 <%= simple_form_for(developer) do |f| %>
-  <%= f.input :first_name, as: :file %>
-  <%= f.input :last_name, as: :file %>
-  <%= f.input :price_day, as: :file %>
-  <%= f.input :prog_langage, :check_box: LANGAGE %>
-  <%= f.input :work_zone, as: :file %>
+  <%= f.input :first_name, as: :string %>
+  <%= f.input :last_name, as: :string %>
+  <%= f.input :price_day, as: :string %>
+  <%= f.input :prog_langage,
+              collection: Developer::LANGAGE,
+              label: "Programmation langage"%>
+  <%= f.input :work_zone, as: :string %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-primary"  %>
 <% end %>

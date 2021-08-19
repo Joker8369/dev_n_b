@@ -1,7 +1,6 @@
 class DevelopersController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :find_dev, only: %i[show destroy edit update]
-  has_one_attached :photo
   def index
     @developers = Developer.all
     @markers = @developers.geocoded.map do |developer|
