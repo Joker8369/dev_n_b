@@ -1,7 +1,10 @@
-
+.main_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .position_bouton{
-    width:    20%;
+    width:    30%;
     position: relative;
-    left:     200px;
+    left:     150px;
     top:      40px;
 }

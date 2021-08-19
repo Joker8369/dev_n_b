@@ -1,45 +1,43 @@
-<div class="profil">
-  <div class="container_profil">
-    <div class="user_description">
-      <div class="user_thumbnail">
-        <%= cl_image_tag @developer.photo.key %>
-      </div>
-        <div class="user_presentation">
-          <div class="full_name">
-            <h2><%= @developer.first_name %></h2>
-            <h2><%= @developer.last_name %></h2>
-          </div>
-            <div class="experiences">
-              <h4><%= "#{@developer.skills} an(s) d'expérience" %></h4>
-                <div class="project_done">
-                  <h3>
-                  <%= "#{@developer.project_done} projets réalisés" %>
-                  </h3>
-                </div>
-
-                <div class="stars">
-                  <h3>
-                  <%= @developer.rating %>
-                  </h3>
-                  <img src="https://cdn1.iconfinder.com/data/icons/material-core/21/star-256.png" alt="">
-                </div>
+<div class="main_container">
+  <div class="profil">
+    <div class="container_profil">
+        <div class="hire_me position_bouton">
+          <%= link_to "Engagez-Moi", new_developer_booking_path(@developer) %>
+        </div>
+          <div class="user_description">
+            <div class="user_thumbnail">
+              <%= cl_image_tag @developer.photo.key %>
             </div>
-              <div class="hire_me">
-                <%= link_to "Engagez-Moi", new_developer_booking_path(@developer) %>
-              </div>
-              <div class="update">
-              <%= link_to "Update !", edit_developer_path(@developer) %>
-              <div class="back">
-              <%= link_to 'Back', developers_path %></div>
+              <div class="user_presentation">
+                <div class="full_name">
+                  <h2><%= @developer.first_name %></h2>
+                  <h2><%= @developer.last_name %></h2>
+                </div>
+                  <div class="experiences">
+                    <h4><%= "#{@developer.skills} an(s) d'expérience" %></h4>
+                      <div class="project_done">
+                        <h3><%= "#{@developer.project_done} projets réalisés" %></h3>
+                      </div>
+                        <div class="stars">
+                          <h3><%= @developer.rating %></h3>
+                          <img src="https://cdn1.iconfinder.com/data/icons/material-core/21/star-256.png" alt="">
+                        </div>
+                  </div>
               </div>
           </div>
-        </div>
-    </div>
-      <div class="reviews">
-        <div class="titre_review">
-        </div>
-        <div class="description_review">
+      </div>
+        <div class="reviews">
+          <div class="titre_review">
+          </div>
+            <div class="description_review">
+            </div>
         </div>
       </div>
+  <div class="previews">
+    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
   </div>
+    </div>
 </div>

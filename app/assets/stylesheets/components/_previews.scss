@@ -1,0 +1,9 @@
+
+.previews{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.previews img{
+  width : 50%;
+}
