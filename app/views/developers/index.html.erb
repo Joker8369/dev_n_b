@@ -4,14 +4,26 @@
   <div class='search_bar'>
       <%= simple_form_for :search, method: :get, html: { class: 'd-flex my-3' } do |f| %>
       <%= f.input :query, placeholder: "Find a developer",
-                            label: false,
-                            input_html: { name: :query,
-                                          value: params.dig(:query) } %>
+                          label: false,
+                          input_html: { name: :query,
+                          value: params.dig(:query) } %>
+      <%= f.input :min_price, label: false,
+                              placeholder: "Price min",
+                              input_html: { name: :min_price,
+                              value: params.dig(:min_price) } %>
+      <%= f.input :max_price, label: false,
+                              placeholder: "Price max",
+                              input_html: { name: :max_price,
+                              value: params.dig(:max_price) } %>
       <div class="ml-3">
         <%= f.submit "Search", class: "btn btn-primary"  %>
       </div>
       <% end %>
-  </div>
+      <div>
+        <% if @developers.empty? %>
+          <p>There is no developer for this search</p>
+        <% end %>
+      </div>
     <% @developers.each do |dev| %>
       <div class="cards">
         <div class="container_card">

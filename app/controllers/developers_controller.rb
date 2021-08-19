@@ -61,13 +61,13 @@ class DevelopersController < ApplicationController
   def search_bar
     if params[:query].present?
       sql_query = "\ developers.first_name @@ :query \ OR developers.last_name @@ :query"
-      @developers = Developer.where(sql_query, query: "%#{params[:query]}%")
+      @developers = @developers.where(sql_query, query: "%#{params[:query]}%")
+    end
     if params[:min_price].present?
-      @developers = @developers.where("developers.price >= ?", params[:min_price])
+      @developers = @developers.where("developers.price_day >= ?", params[:min_price])
     end
     if params[:max_price].present?
-      @developers = @developers.where("developers.price >= ?", params[:max_price])
-    end
+      @developers = @developers.where("developers.price_day <= ?", params[:max_price])
     end
   end
 end
