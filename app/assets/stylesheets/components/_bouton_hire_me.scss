@@ -3,15 +3,18 @@
     width:      40%;
     margin:     0 30px;
     padding:     5px;
-    background: #1edd88;
+    background: #b3c0fc;
     text-align: center;
     border-radius: 5px;
 }
 .hire_me:hover{
-    background: #18b66f;
+    background: #848fbe;
+    a{
+      color : white;
+    }
 }
 .hire_me a{
-  color : white;
+  color: #44559e;
   font-weight: 600;
   font-size: 12px;
   text-decoration: none;
