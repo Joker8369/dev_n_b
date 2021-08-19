@@ -6,6 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @developer = Developer.find(params[:developer_id])
     @booking = Booking.new(booking_params)
     @booking.customer = current_user
     @booking.developer = @developer
