@@ -15,6 +15,10 @@
                               placeholder: "Price max",
                               input_html: { name: :max_price,
                               value: params.dig(:max_price) } %>
+      <%= f.input :town, placeholder: "Enter a town",
+                          label: false,
+                          input_html: { name: :twon,
+                          value: params.dig(:town) } %>
       <div class="ml-3">
         <%= f.submit "Search", class: "btn btn-primary"  %>
       </div>
@@ -28,7 +32,7 @@
       <div class="cards">
         <div class="container_card">
           <%= link_to "#", class: "thumbnail" do %>
-            <%= image_tag "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" %>
+            <%=cl_image_tag dev.photo.key %>
           <% end %>
           <div class="description">
             <div class="full_name">
@@ -67,3 +71,6 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
+
+
+<h2><%= link_to " + Add a new Developer", new_developer_path, class: "btn btn-primary"%></h2>
