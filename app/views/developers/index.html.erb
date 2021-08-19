@@ -1,6 +1,38 @@
 
 <div style="display: grid; grid-template-columns: 1fr 1fr" >
   <div class="list">
+  <div class='search_bar'>
+      <%= simple_form_for :search, method: :get, html: { class: 'd-flex my-3' } do |f| %>
+      <%= f.input :query, placeholder: "Find a developer",
+                          label: false,
+                          input_html: { name: :query,
+                          value: params.dig(:query) } %>
+      <%= f.input :min_price, label: false,
+                              placeholder: "Price min",
+                              input_html: { name: :min_price,
+                              value: params.dig(:min_price) } %>
+      <%= f.input :max_price, label: false,
+                              placeholder: "Price max",
+                              input_html: { name: :max_price,
+                              value: params.dig(:max_price) } %>
+      <%= f.input :town, placeholder: "Enter a town",
+                          label: false,
+                          input_html: { name: :town,
+                          value: params.dig(:town) } %>
+      <%= f.input :category, collection: Developer::LANGAGE,
+                             selected: params.dig(:category),
+                             include_blank: true,
+                             label: false,
+                             input_html: { name: :category } %>
+      <div class="ml-3">
+        <%= f.submit "Search", class: "btn btn-primary"  %>
+      </div>
+      <% end %>
+      <div>
+        <% if @developers.empty? %>
+          <p>There is no developer for this search</p>
+        <% end %>
+      </div>
     <% @developers.each do |dev| %>
       <div class="cards">
         <div class="container_card">
@@ -45,5 +77,6 @@
   </div>
 </div>
 
-
+<div>
 <h2><%= link_to " + Add a new Developer", new_developer_path, class: "btn btn-primary"%></h2>
+</div>

@@ -9,6 +9,4 @@ class User < ApplicationRecord
 
   has_many :developers_as_owner, foreign_key: 'owner_id', class_name: 'Developer' , dependent: :destroy
   # has_many :bookings_as_owner
-
-
 end

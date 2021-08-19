@@ -3,6 +3,7 @@ class DevelopersController < ApplicationController
   before_action :find_dev, only: %i[show destroy edit update]
   def index
     @developers = Developer.all
+    search_bar
     @markers = @developers.geocoded.map do |developer|
       {
         lat: developer.latitude,
@@ -55,5 +56,24 @@ class DevelopersController < ApplicationController
 
   def find_dev
     @developer = Developer.find(params[:id])
+  end
+
+  def search_bar
+    if params[:query].present?
+      sql_query = "\ developers.first_name @@ :query \ OR developers.last_name @@ :query"
+      @developers = @developers.where(sql_query, query: "%#{params[:query]}%")
+    end
+    if params[:min_price].present?
+      @developers = @developers.where("developers.price_day >= ?", params[:min_price])
+    end
+    if params[:max_price].present?
+      @developers = @developers.where("developers.price_day <= ?", params[:max_price])
+    end
+    if params[:town].present?
+      @developers = @developers.where("developers.work_zone @@ :town", town: params[:town])
+    end
+    if params[:category].present?
+      @developers = @developers.where(prog_langage: params[:category])
+    end
   end
 end
