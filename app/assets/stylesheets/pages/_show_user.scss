@@ -1,0 +1,23 @@
+.container_show{
+  width: 70%;
+  margin: 30px auto;
+}
+
+.navbar_user{
+  background: #b3c0fc;
+  height: calc(100vh - 8vh);
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position : absolute;
+}
+.navbar_user h4 {
+  margin-bottom: 35px;
+  color : white;
+  text-decoration: none;
+}
+.navbar_user h4 {
+  text-decoration: none;
+}

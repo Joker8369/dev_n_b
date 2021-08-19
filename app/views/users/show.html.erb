@@ -1,4 +1,49 @@
-<p>Hello <%= @user.first_name %></p>
-<% @user_devs.each do |dev| %>
-<p><%= dev.first_name %> </p>
-<% end %>
+<div class="navbar_user">
+  <h4> <%= link_to "Mes Dévelopers", user_path(current_user)%> </h4>
+  <h4> <%= link_to "Mes Bookings", user_path(current_user)%> </h4>
+</div>
+<div class="container_show">
+  <div class="titre_show">
+  <h2>Hello <%= @user.first_name %></h2>
+  <h3>Voici votre liste de déveloper(s)</h3>
+  </div>
+  <div class="list">
+    <% @user_devs.each do |dev| %>
+      <div class="cards">
+        <div class="container_card">
+          <%= link_to "#", class: "thumbnail" do %>
+            <%=cl_image_tag dev.photo.key %>
+          <% end %>
+          <div class="description">
+            <div class="full_name">
+              <h3><%= dev.first_name %></h3>
+              <h3><%= dev.last_name %></h3>
+            </div>
+            <div class="experiences">
+              <h4><%= "#{dev.skills} an(s) d'expérience" %></h4>
+            </div>
+          </div>
+          <div class="language_prog">
+            <h4>
+              <%= dev.prog_langage %>
+            </h4>
+          </div>
+          <div class="work_zone">
+            <h4>
+              <%= dev.work_zone %>
+            </h4>
+          </div>
+          <div class="price">
+            <h5>
+              <%= "#{dev.price_day} € " %>
+            </h5>
+          </div>
+          <div class="modifs">
+            <%= link_to image_tag("pencil (2).png"), "http://www.mysite.com/" %> |
+            <%= link_to image_tag("bin (2).png"), "http://www.mysite.com/" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
