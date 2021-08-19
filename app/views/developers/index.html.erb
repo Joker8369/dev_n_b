@@ -1,6 +1,17 @@
 
 <div style="display: grid; grid-template-columns: 1fr 1fr" >
   <div class="list">
+  <div class='search_bar'>
+      <%= simple_form_for :search, method: :get, html: { class: 'd-flex my-3' } do |f| %>
+      <%= f.input :query, placeholder: "Find a developer",
+                            label: false,
+                            input_html: { name: :query,
+                                          value: params.dig(:query) } %>
+      <div class="ml-3">
+        <%= f.submit "Search", class: "btn btn-primary"  %>
+      </div>
+      <% end %>
+  </div>
     <% @developers.each do |dev| %>
       <div class="cards">
         <div class="container_card">
