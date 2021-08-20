@@ -24,3 +24,13 @@
     width: 100%;
     margin: 5%;
 }
+.form-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-flex .string_required{
+  text-align: center;
+}
