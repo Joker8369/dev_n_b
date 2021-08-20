@@ -1,3 +1,9 @@
+.main_container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    padding: 10%;
+}
 .profil{
   height: 550px;
   position: relative;
