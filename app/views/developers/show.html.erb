@@ -1,45 +1,55 @@
-<div class="profil">
-  <div class="container_profil">
-    <div class="user_description">
-      <div class="user_thumbnail">
-        <%= cl_image_tag @developer.photo.key %>
-      </div>
-        <div class="user_presentation">
-          <div class="full_name">
-            <h2><%= @developer.first_name %></h2>
-            <h2><%= @developer.last_name %></h2>
-          </div>
-            <div class="experiences">
-              <h4><%= "#{@developer.skills} an(s) d'expérience" %></h4>
-                <div class="project_done">
-                  <h3>
-                  <%= "#{@developer.project_done} projets réalisés" %>
-                  </h3>
-                </div>
-
-                <div class="stars">
-                  <h3>
-                  <%= @developer.rating %>
-                  </h3>
-                  <img src="https://cdn1.iconfinder.com/data/icons/material-core/21/star-256.png" alt="">
-                </div>
+<div class="main_container">
+  <div class="profil">
+    <div class="container_profil">
+        <div class="hire_me position_bouton">
+          <%= link_to "Engagez-Moi", new_developer_booking_path(@developer) %>
+        </div>
+          <div class="user_description">
+            <div class="user_thumbnail">
+              <%= cl_image_tag @developer.photo.key %>
             </div>
-              <div class="hire_me">
-                <%= link_to "Engagez-Moi", new_developer_booking_path(@developer) %>
-              </div>
-              <div class="update">
-              <%= link_to "Update !", edit_developer_path(@developer) %>
-              <div class="back">
-              <%= link_to 'Back', developers_path %></div>
+              <div class="user_presentation">
+                <div class="full_name">
+                  <h2><%= @developer.first_name %></h2>
+                  <h2><%= @developer.last_name %></h2>
+                </div>
+                  <div class="experiences">
+                    <h4><%= "#{@developer.skills} an(s) d'expérience" %></h4>
+                      <div class="project_done">
+                        <h3><%= "#{@developer.project_done} projets réalisés" %></h3>
+                      </div>
+                        <div class="stars">
+                          <h3><%= @developer.rating %></h3>
+                          <img src="https://cdn1.iconfinder.com/data/icons/material-core/21/star-256.png" alt="">
+                        </div>
+                  </div>
               </div>
           </div>
-        </div>
-    </div>
-      <div class="reviews">
-        <div class="titre_review">
-        </div>
-        <div class="description_review">
+      </div>
+      <% @developer.reviews.each do |review| %>
+        <div class="reviews">
+          <div class="titre_review">
+           <p> <%= review.user.first_name %> <%= review.user.last_name %> </p>
+          </div>
+            <div class="description_review">
+              <%= review.content %>
+              <% end %>
+            </div>
         </div>
       </div>
+  <div class="previews">
+  <div class="element_a">
+    <%= image_tag "essai.png"%>
   </div>
+  <div class="element_b">
+    <%= image_tag "essai.png"%>
+  </div>
+  <div class="element_c">
+    <%= image_tag "essai.png"%>
+  </div>
+  <div class="element_d">
+    <%= image_tag "essai.png"%>
+  </div>
+  </div>
+    </div>
 </div>
