@@ -1,6 +1,3 @@
-
-<div style="display: grid; grid-template-columns: 1fr 1fr" >
-  <div class="list">
   <div class='search_bar'>
       <%= simple_form_for :search, method: :get, html: { class: 'd-flex my-3' } do |f| %>
       <%= f.input :query, placeholder: "Find a developer",
@@ -33,46 +30,48 @@
           <p>There is no developer for this search</p>
         <% end %>
       </div>
-    <% @developers.each do |dev| %>
-      <div class="cards">
-        <div class="container_card">
-          <%= link_to "#", class: "thumbnail" do %>
-            <%=cl_image_tag dev.photo.key %>
-          <% end %>
-          <div class="description">
-            <div class="full_name">
-              <h3><%= dev.first_name %></h3>
-              <h3><%= dev.last_name %></h3>
+</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr" >
+    <div class="list">
+      <% @developers.each do |dev| %>
+        <div class="cards">
+          <div class="container_card">
+            <%= link_to "#", class: "thumbnail" do %>
+              <%=cl_image_tag dev.photo.key %>
+            <% end %>
+            <div class="description">
+              <div class="full_name">
+                <h3><%= dev.first_name %></h3>
+                <h3><%= dev.last_name %></h3>
+              </div>
+              <div class="experiences">
+                <h4><%= "#{dev.skills} an(s) d'expérience" %></h4>
+              </div>
             </div>
-            <div class="experiences">
-              <h4><%= "#{dev.skills} an(s) d'expérience" %></h4>
+            <div class="language_prog">
+              <h4>
+                <%= dev.prog_langage %>
+              </h4>
             </div>
-          </div>
-          <div class="language_prog">
-            <h4>
-              <%= dev.prog_langage %>
-            </h4>
-          </div>
-          <div class="work_zone">
-            <h4>
-              <%= dev.work_zone %>
-            </h4>
-          </div>
-          <div class="price">
-            <h5>
-              <%= "#{dev.price_day} € " %>
-            </h5>
-          </div>
-          <div class="hire_me">
-            <%= link_to "Louez-Moi", developer_path(dev) %>
+            <div class="work_zone">
+              <h4>
+                <%= dev.work_zone %>
+              </h4>
+            </div>
+            <div class="price">
+              <h5>
+                <%= "#{dev.price_day} € " %>
+              </h5>
+            </div>
+            <div class="hire_me">
+              <%= link_to "Louez-Moi", developer_path(dev) %>
+            </div>
           </div>
         </div>
+      <% end %>
+    </div>
+      <div id="map"
+            style="height: 100vh;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-    <% end %>
-  </div>
-  <div id="map"
-        style="height: 100vh;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
-</div>
