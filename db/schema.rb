@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_19_091859) do
+ActiveRecord::Schema.define(version: 2021_08_20_095420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,16 @@ ActiveRecord::Schema.define(version: 2021_08_19_091859) do
     t.index ["owner_id"], name: "index_developers_on_owner_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.bigint "developer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["developer_id"], name: "index_reviews_on_developer_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
@@ -90,4 +100,6 @@ ActiveRecord::Schema.define(version: 2021_08_19_091859) do
   add_foreign_key "bookings", "developers"
   add_foreign_key "bookings", "users", column: "customer_id"
   add_foreign_key "developers", "users", column: "owner_id"
+  add_foreign_key "reviews", "developers"
+  add_foreign_key "reviews", "users"
 end
