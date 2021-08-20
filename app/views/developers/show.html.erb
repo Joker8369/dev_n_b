@@ -26,10 +26,14 @@
               </div>
           </div>
       </div>
+      <% @developer.reviews.each do |review| %>
         <div class="reviews">
           <div class="titre_review">
+           <p> <%= review.user.first_name %> <%= review.user.last_name %> </p>
           </div>
             <div class="description_review">
+              <%= review.content %>
+              <% end %>
             </div>
         </div>
       </div>
