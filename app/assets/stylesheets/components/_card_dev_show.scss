@@ -2,6 +2,7 @@
   width:    45%;
   height:   550px;
   position: relative;
+  padding: 5%;
 }
 .container_profil{
   display:        flex;
@@ -10,10 +11,10 @@
 }
 
 .user_description{
-    display:     flex;
+    display: flex;
     align-items: center;
-    width:       80%;
-    margin:      25px auto;
+    width: 100%;
+    margin: 25px 0;
 }
 .user_thumbnail{
   margin-left: 10px;
@@ -33,4 +34,9 @@
 .experiences{
   display:      flex;
   align-items:  center;
+}
+.position_buton{
+  position: relative;
+  top: 20px;
+  left: 130px;
 }
