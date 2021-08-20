@@ -32,8 +32,8 @@ class DevelopersController < ApplicationController
   end
 
   def destroy
-    @developer.delete
-    redirect_to developers_path
+    @developer.destroy
+    redirect_to user_path(current_user)
   end
 
   def edit
