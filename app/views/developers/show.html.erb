@@ -26,6 +26,7 @@
               </div>
           </div>
       </div>
+      <h3 style="margin-bottom: 20px;">Les reviews de votre développer</h3>
       <% @developer.reviews.each do |review| %>
         <div class="reviews">
           <div class="titre_review">
@@ -33,23 +34,24 @@
           </div>
             <div class="description_review">
               <%= review.content %>
-              <% end %>
             </div>
+          <% end %>
         </div>
       </div>
-  <div class="previews">
-  <div class="element_a">
-    <%= image_tag "essai.png"%>
-  </div>
-  <div class="element_b">
-    <%= image_tag "essai.png"%>
-  </div>
-  <div class="element_c">
-    <%= image_tag "essai.png"%>
-  </div>
-  <div class="element_d">
-    <%= image_tag "essai.png"%>
-  </div>
-  </div>
     </div>
+      <div class="previews">
+        <div class="item_a">
+        <%= image_tag "developer.jpg" %>
+        </div>
+        <div class="item_b">
+        <%= image_tag "developer.jpg" %>
+        </div>
+        <div class="item_c">
+        <%= image_tag "developer.jpg" %>
+        </div>
+        <div class="item_d">
+        <%= image_tag "developer.jpg" %>
+        </div>
+      </div>
+  </div>
 </div>

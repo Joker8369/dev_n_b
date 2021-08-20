@@ -6,12 +6,18 @@
 .titre_review{
   width: 60%;
   height: 30px;
-  background: rgb(143, 142, 142);
 }
 
 .description_review{
-  width: 100%;
-  height: 150px;
-  background: rgb(66, 66, 66);
-  margin-top: 20px;
+    width: 100%;
+    margin: 20px 0px;
+}
+.titre_review{
+background-color: #ebeefd;
+font-weight: 600;
+padding-left : 2%;
+}
+.description_review{
+  background-color: #cad1f7;
+  margin-bottom : 25px;
 }
