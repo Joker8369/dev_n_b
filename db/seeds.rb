@@ -1,6 +1,7 @@
 User.destroy_all
-Review.destroy_all
 Developer.destroy_all
+Review.destroy_all
+
 
 clem = User.create(email: 'toto@gmail.com', password: 'tototo', password_confirmation: 'tototo', first_name: 'Clement', last_name: 'Malfroy')
 sam = User.create(email: 'tata@gmail.com', password: 'tatata', password_confirmation: 'tatata', first_name: 'Samuel', last_name: 'Boulery')
