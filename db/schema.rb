@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_20_095420) do
+ActiveRecord::Schema.define(version: 2021_08_20_114358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,14 @@ ActiveRecord::Schema.define(version: 2021_08_20_095420) do
     t.index ["owner_id"], name: "index_developers_on_owner_id"
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.bigint "developer_id", null: false
+    t.string "photo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["developer_id"], name: "index_projects_on_developer_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.string "content"
     t.bigint "developer_id", null: false
@@ -100,6 +108,7 @@ ActiveRecord::Schema.define(version: 2021_08_20_095420) do
   add_foreign_key "bookings", "developers"
   add_foreign_key "bookings", "users", column: "customer_id"
   add_foreign_key "developers", "users", column: "owner_id"
+  add_foreign_key "projects", "developers"
   add_foreign_key "reviews", "developers"
   add_foreign_key "reviews", "users"
 end
