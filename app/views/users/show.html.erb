@@ -1,7 +1,25 @@
 <div class="navbar_user">
   <h4> <%= link_to "Créer un déveloper", new_developer_path(@developer)%> </h4>
   <h4> <%= link_to "Mes Dévelopers", user_path(current_user)%> </h4>
-  <h4> <%= link_to "Mes Bookings", user_path(current_user)%> </h4>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popup">
+    Mes Bookings
+  </button>
+  <div id="popup" class="modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p> Mes Bookings </p>
+        </div>
+        <div class="modal-body">
+          <% current_user.bookings_as_customer.each do |booking| %>
+            <%= booking.developer.first_name %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+        </div>
+    </div>
+  </div>
+</div>
 </div>
 <div class="container_show">
   <div class="titre_show">
