@@ -1,5 +1,8 @@
-<%= simple_form_for([@developer, @booking]) do |f| %>
-  <%= f.input :start_on %>
-  <%= f.input :end_on %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container_form">
+<h2>Réservez votre dévelopeur, à la journée, à la semaine, au mois. C'est vous qui choisissez !</h2>
+  <%= simple_form_for([@developer, @booking]) do |f| %>
+    <%= f.input :start_on %>
+    <%= f.input :end_on %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
